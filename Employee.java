@@ -1,42 +1,43 @@
-package com.Encapsulation;
+package com.Polymorphism;
+
+class Emp{
+	void work() {
+		System.out.println("Employee Works");
+	}
+}
+class Developer extends Emp{
+
+	@Override
+	void work()
+	{
+		System.out.println("Developer writes code");
+	}
+}
+class Tester extends Emp{
+	@Override
+	void work() {
+		System.out.println("Tester tests software");
+	}
+}
+class Manager extends Emp{
+	
+	@Override
+	void work()
+	{
+		System.out.println("Manager manages the team");
+	}
+}
 
 public class Employee {
-	
-	private String name;
-	private double sal;
-	
-	public void setName(String name)
-	{
-		this.name=name;
-	}
-	public String getName()
-	{
-		return name;
-	}
-	
-	public void setSal(double sal)
-	{
-		if(sal>=0)
-		{
-			this.sal=sal;
-		}
-		else {
-			System.out.println("Invalid");
-		}
-	}
-	public double getSal()
-	{
-		return sal;
-	}
 	public static void main(String[] args) {
-		
-		Employee e=new Employee();
-		
-		e.setName("Atchaya");
-		System.out.println(e.getName());
-		
-		e.setSal(280000.45);
-		System.out.println(e.getSal());
+		Emp e=new Emp();
+		e.work();
+		Developer d=new Developer();
+		d.work();
+		Tester t=new Tester();
+		t.work();
+		Manager m=new Manager();
+		m.work();
 	}
-	
+
 }
