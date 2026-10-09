@@ -1,15 +1,14 @@
 package com.constructoe;
 
-public class Student {
-
+public class stu {
 	String name;
 	int age;
 	String course;
 	
-	Student(String n,int a,String c){
-		name=n;
-		age=a;
-		course=c;
+	stu(String name,int age,String course){
+		this.name=name;
+		this.age=age;
+		this.course=course;
 	}
 	void display() {
 		System.out.println("Name: "+name);
@@ -18,11 +17,12 @@ public class Student {
 	}
 	public static void main(String[] args) {
 		
-		Student s1=new Student("Atchaya",21,"BCA");
-		Student s2=new Student("Mugil",13,"10th");
-		Student s3=new Student("Bhavan",23,"MCA");
+		stu s1=new stu("Atchaya",21,"BCA");
+		stu s2=new stu("Mugil",13,"10th");
+		stu s3=new stu("Bhavan",23,"MCA");
 		s1.display();
 		s2.display();
 		s3.display();
 	}
+
 }
